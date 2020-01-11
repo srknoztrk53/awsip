@@ -48,6 +48,6 @@
         echo $(aws ec2 associate-address --instance-id $INSTANCE --public-ip $NEW_IP) >> /home/ec2-user/logs/$date.log
 
         echo "
-		Getting IPs addresses again" >> /home/ec2-user/logs/$date.log
+	Getting IPs addresses again" >> /home/ec2-user/logs/$date.log
         echo $(aws ec2 describe-addresses) |  python -m json.tool >> /home/ec2-user/logs/$date.log
 
