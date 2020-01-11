@@ -10,18 +10,17 @@
         echo "This is the INSTANCE ID "$INSTANCE >> /home/ec2-user/logs/$date.log
         echo "THis is the existing IP "$OLD_IP >> /home/ec2-user/logs/$date.log
 
-        #Gets Allocation ID for the current IP, trims "" and trims , in the end
-		#All ELastic IP Delete, Gets Allocation ID for the current IP, trims "" and trims , in the end
+	#All ELastic IP Delete, Gets Allocation ID for the current IP, trims "" and trims , in the end
         ALLOCATION_ID=$(aws ec2 describe-addresses | grep -i AllocationId | cut -f 2 -d ":" | sed 's/"//g' | tr -d "," | head -n 1)
-		echo $(aws ec2 release-address  --allocation-id $ALLOCATION_ID)
-		ALLOCATION_ID=$(aws ec2 describe-addresses | grep -i AllocationId | cut -f 2 -d ":" | sed 's/"//g' | tr -d "," | head -n 1)
-		echo $(aws ec2 release-address  --allocation-id $ALLOCATION_ID)
-		ALLOCATION_ID=$(aws ec2 describe-addresses | grep -i AllocationId | cut -f 2 -d ":" | sed 's/"//g' | tr -d "," | head -n 1)
-		echo $(aws ec2 release-address  --allocation-id $ALLOCATION_ID)
-		ALLOCATION_ID=$(aws ec2 describe-addresses | grep -i AllocationId | cut -f 2 -d ":" | sed 's/"//g' | tr -d "," | head -n 1)
-		echo $(aws ec2 release-address  --allocation-id $ALLOCATION_ID)
-		ALLOCATION_ID=$(aws ec2 describe-addresses | grep -i AllocationId | cut -f 2 -d ":" | sed 's/"//g' | tr -d "," | head -n 1)
-		echo $(aws ec2 release-address  --allocation-id $ALLOCATION_ID)
+	echo $(aws ec2 release-address  --allocation-id $ALLOCATION_ID)
+	ALLOCATION_ID=$(aws ec2 describe-addresses | grep -i AllocationId | cut -f 2 -d ":" | sed 's/"//g' | tr -d "," | head -n 1)
+	echo $(aws ec2 release-address  --allocation-id $ALLOCATION_ID)
+	ALLOCATION_ID=$(aws ec2 describe-addresses | grep -i AllocationId | cut -f 2 -d ":" | sed 's/"//g' | tr -d "," | head -n 1)
+	echo $(aws ec2 release-address  --allocation-id $ALLOCATION_ID)
+	ALLOCATION_ID=$(aws ec2 describe-addresses | grep -i AllocationId | cut -f 2 -d ":" | sed 's/"//g' | tr -d "," | head -n 1)
+	echo $(aws ec2 release-address  --allocation-id $ALLOCATION_ID)
+	ALLOCATION_ID=$(aws ec2 describe-addresses | grep -i AllocationId | cut -f 2 -d ":" | sed 's/"//g' | tr -d "," | head -n 1)
+	echo $(aws ec2 release-address  --allocation-id $ALLOCATION_ID)
 
         echo "This is the current Allocation ID  ".$ALLOCATION_ID >> /home/ec2-user/logs/$date.log
 
