@@ -3,15 +3,11 @@
 
 # AWS CLI INSTALL
 
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-
-unzip awscliv2.zip
-
-sudo ./aws/install
+sudo apt  install awscli -y
 
 # AWS CONFIGURE
 
-aws configure
+sudo aws configure
 
 AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
 
