@@ -33,6 +33,6 @@ AWS Access Key ID [None]: AKIAIOSFODAA7EXAMPLE
 
 AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MxyNG/bPxRfiCYEXAMPLEKEY
 
-Default region name [None]: us-west-2
+Default region name [None]: us-west-1
 
 Default output format [None]: json
