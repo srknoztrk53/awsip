@@ -12,6 +12,6 @@ ALLOCATION_ID=$(aws ec2 describe-addresses | grep -i AllocationId | cut -f 2 -d 
 echo $(aws ec2 release-address  --allocation-id $ALLOCATION_ID)
 
 #New IP Address
-INSTANCE=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+INSTANCE=$(i-01...........)
 NEW_IP=$(aws ec2 allocate-address --query PublicIp | tr -d '"')
 aws ec2 associate-address --instance-id $INSTANCE --public-ip $NEW_IP
