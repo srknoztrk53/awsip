@@ -17,9 +17,9 @@ sudo apt  install awscli -y
 
 sudo aws configure
 
-AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
+AWS Access Key ID [None]: AKIAIOSFODAA7EXAMPLE
 
-AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MxyNG/bPxRfiCYEXAMPLEKEY
 
 Default region name [None]: us-west-2
 
