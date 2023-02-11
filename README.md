@@ -3,9 +3,13 @@
 
 nano ip-rotator.sh
 
-Change Instance ID
+>Change Instance ID
 
 INSTANCE="i-XXXXXXXXXX"
+
+>RUN
+
+./ip-rotator.sh
 
 
 # AWS CLI INSTALL
